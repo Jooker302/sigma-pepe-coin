@@ -1,43 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>bitcypo</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- awesome fontfamily -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<body class="main-layout">
+  <div id="root"></div>
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="" /></div>
+    </div>
+    <!-- end loader -->
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#Tokenomkics">Tokenomkics</a>
+        <a href="">Telegram</a>
+        <a href="">Twitter</a>
+        <a href="#team">Team</a>
+    </div>
+    <!-- header -->
+    <header>
+        <!-- header inner -->
+        <div class="head-top">
+            <div class="container-fluid">
+                <div class="row d_flex">
+                    <div class="col-sm-3">
+                        <div class="logo">
+                            <a href="index.html">Sigma Pepe</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <ul class="social_icon text_align_right d_none">
+                            <li> <a href=""><i class="fa fa-twitter"></i></a></li>
+                            <li> <a href=""><i class="fa fa-telegram"></i></a></li>
+                            <!-- <li> <a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li> <a href="Javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li> <a href="Javascript:void(0)"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li> -->
+                        </ul>
+                    </div>
+                    <div class="col-sm-5">
+                        <ul class="email text_align_right">
+                            <!-- <li class="d_none"><a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                            <li class="d_none"> <a href="Javascript:void(0)"><i class="fa fa-search" style="cursor: pointer;" aria-hidden="true"></i></a> </li> -->
+                            <li>
+                                <button class="openbtn" onclick="openNav()"><img src="images/menu_btn.png"></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+    <!-- start slider section -->
+    <div id="home" class=" banner_main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <!-- <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li> -->
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="container-fluid">
+                                    <div class="carousel-caption relative">
+                                        <div class="row d_flex">
+                                            <div class="col-md-6">
+                                                <div class="con_img">
+                                                    <figure><img class="img_responsive rounded-circle" src="main.jpeg" alt="#" /></figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="bluid">
+                                                    <h1><br> Sigma Pepe</h1>
+                                                    <p>"Sigma Pepe: Elevating Memes on the Arbitrum Chain! 🐸🚀⛓️"
+                                                    </p>
+                                                    <a class="read_more" href="">Get Started </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end slider section -->
+    <!-- wallet -->
+    <div class="wallet" id="tokenomkics">
+        <div class="container-fluid">
+          <div class="titlepage text_align_center">
+          <h2 class="titlepage text_align_center">Tokenomkics</h2>
+        </div>
+            <div class="row">
+              
+                <div class="col-lg-3 col-sm-6">
+                    <div id="wa_hover" class="wallet_box text_align_center">
+                        <i><img src="images/wa1.svg" alt="#"/></i>
+                        <h3>Token Supply</h3>
+                        <p>Sigma Pepe supply is of 2000000</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div id="wa_hover" class="wallet_box text_align_center">
+                        <i><img src="images/wa2.svg" alt="#"/></i>
+                        <h3>Soft Cap</h3>
+                        <p>Sigma Pepe soft cap is 5 ETH </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div id="wa_hover" class="wallet_box text_align_center">
+                        <i><img src="images/wa3.svg" alt="#"/></i>
+                        <h3>Hard Cap </h3>
+                        <p>Sigma Pepe soft cap is 15 ETH </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div id="wa_hover" class="wallet_box text_align_center">
+                        <i><img src="images/wa4.svg" alt="#"/></i>
+                        <h3>Listed on</h3>
+                        <p> It is Listed on ARB Chain </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end wallet -->
+    <!-- about -->
+    <div id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="about_border">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="titlepage text_align_left">
+                                    <h2>About Us</h2>
+                                </div>
+                                <div class="about_text">
+                                    <p>Welcome to the future of memecoins with Sigma Pepe, the latest sensation to hit the crypto scene. Combining the timeless hilarity of the Pepe meme with the cutting-edge efficiency of the Arbitrum chain network, Sigma Pepe is here to redefine how we experience meme-based cryptocurrencies.
+                                    </p><p>
+                                      With its quirky and beloved Pepe frog mascot, Sigma Pepe captures the essence of internet culture while embracing the innovation of blockchain technology. The decision to list on the Arbitrum chain network enhances the user experience, offering lightning-fast transactions and minimal fees, ensuring that the laughs keep flowing without interruption.
+                                    </p><p>
+                                      But Sigma Pepe isn't just about memes – it's about building a robust ecosystem. Holders can participate in yield farming, liquidity provision, and other engaging activities, all while enjoying the security and scalability that Arbitrum provides. This memecoin isn't just a trend; it's a platform for community engagement and growth.</p>
+                                    <!-- <a class="read_more" href="about.html">Read More</a> -->
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="about_img">
+                                    <figure><img class="img_responsive rounded-circle" src="main.jpeg" alt="#" /></figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end about -->
+    <!-- graf -->
+    <!-- <div cla -->
+    <!-- end graf -->
+    <!-- testimonial -->
+    <div class="testimonial">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="border_testi">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="titlepage text_align_center">
+                                    <h2>Testimonial</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d_flex">
+                            <div class="col-md-10 offset-md-1">
+                                <div id="testimo" class="carousel slide our_testimonial" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#testimo" data-slide-to="0" class="active"></li>
+                                        <li data-target="#testimo" data-slide-to="1"></li>
+                                        <li data-target="#testimo" data-slide-to="2"></li>
+                                        <li data-target="#testimo" data-slide-to="3"></li>
+                                        <li data-target="#testimo" data-slide-to="4"></li>
+                                        <li data-target="#testimo" data-slide-to="5"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        
+                                        <div class="carousel-item active">
+                                            <div class="container">
+                                                <div class="carousel-caption posi_in">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="testomoniam_text text_align_center">
+                                                                <i><img src="dxsale.png" alt="#"/></i>
+                                                                <h3>DxSale</h3>
+                                                                
+                                                                
+                                                            </div>
+                                                        </div>
+                              
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<!-- 2 -->
+                                        <div class="carousel-item">
+                                          <div class="container">
+                                              <div class="carousel-caption posi_in">
+                                                  <div class="row">
+                                                      <div class="col-md-12">
+                                                          <div class="testomoniam_text text_align_center">
+                                                              <i><img src="images/clint.jpg" alt="#"/></i>
+                                                              <h3>MorGan Den</h3>
+                                                              
+                                                              
+                                                          </div>
+                                                      </div>
+                            
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+                                      <!-- 3 -->
+
+                                      <div class="carousel-item">
+                                        <div class="container">
+                                            <div class="carousel-caption posi_in">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="testomoniam_text text_align_center">
+                                                            <i><img src="images/clint.jpg" alt="#"/></i>
+                                                            <h3>MorGan Den</h3>
+                                                            
+                                                            
+                                                        </div>
+                                                    </div>
+                          
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- 4 -->
+
+                                    <div class="carousel-item">
+                                      <div class="container">
+                                          <div class="carousel-caption posi_in">
+                                              <div class="row">
+                                                  <div class="col-md-12">
+                                                      <div class="testomoniam_text text_align_center">
+                                                          <i><img src="images/clint.jpg" alt="#"/></i>
+                                                          <h3>MorGan Den</h3>
+                                                          
+                                                          
+                                                      </div>
+                                                  </div>
+                        
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <!-- 5 -->
+
+
+                                  <div class="carousel-item">
+                                    <div class="container">
+                                        <div class="carousel-caption posi_in">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="testomoniam_text text_align_center">
+                                                        <i><img src="images/clint.jpg" alt="#"/></i>
+                                                        <h3>MorGan Den</h3>
+                                                        
+                                                        
+                                                    </div>
+                                                </div>
+                      
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 6 -->
+
+
+
+                                <div class="carousel-item">
+                                  <div class="container">
+                                      <div class="carousel-caption posi_in">
+                                          <div class="row">
+                                              <div class="col-md-12">
+                                                  <div class="testomoniam_text text_align_center">
+                                                      <i><img src="images/clint.jpg" alt="#"/></i>
+                                                      <h3>MorGan Den</h3>
+                                                      
+                                                      
+                                                  </div>
+                                              </div>
+                    
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+
+                                    </div>
+                                    <a class="carousel-control-prev" href="#testimo" role="button" data-slide="prev">
+                                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#testimo" role="button" data-slide="next">
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end testimonial -->
+    <!-- works -->
+    
+    <!-- works -->
+    <!-- contact -->
+    
+    <!-- end contact -->
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                
+            <div class="copyright text_align_center ">
+               <div class="container ">
+                  <div class="row ">
+                     <div class="col-md-12 ">
+                        <p>© 2020 All Rights Reserved. Design by   <a href="https://html.design/ "> Free Html Template</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js "></script>
+      <script src="js/bootstrap.bundle.min.js "></script>
+      <script src="js/jquery-3.0.0.min.js "></script>
+      <script src="js/custom.js "></script>
+   </body>
 </html>
